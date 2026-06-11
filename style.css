@@ -380,28 +380,34 @@ body {
     font-size: 1rem;
   }
 }
-.service {
-    text-align: center;
+/* HARD FIX for the service image */
+section.service {
     width: 100%;
-    overflow: hidden;
+    max-width: 100%;
+    overflow-x: hidden;
+    text-align: center;
 }
 
-.service-image-wrap {
-    width: min(100% - 40px, 1100px);
+section.service .service-image-wrap {
+    display: block;
+    width: 90%;
+    max-width: 1000px;
     margin: 40px auto;
-    padding: 20px;
+    padding: 18px;
     background: #ffffff;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,.12);
     overflow: hidden;
 }
 
-.service-image {
+section.service img,
+section.service .service-image,
+img[src="ComeBeAPartOfMeaningfulTime.png"] {
     display: block;
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-    margin: 0 auto;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0 auto !important;
     border-radius: 16px;
 }
   }
