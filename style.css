@@ -424,4 +424,32 @@ a:hover {
   .lunch {
     padding: 45px 20px;
   }
+
+  .mission-section {
+  padding: 70px 20px;
+}
+
+.mission-box {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 48px;
+  border-radius: 22px;
+  box-shadow: 0 12px 30px rgba(43, 36, 29, 0.10);
+  border-left: 8px solid #344323;
+  text-align: center;
+}
+.mission-box .mission {
+  color: #344323;
+  font-size: 1.55rem;
+  font-style: italic;
+  line-height: 1.7;
+  margin: 0 0 28px;
+}
+
+.mission-box p {
+  font-size: 1.12rem;
+  line-height: 1.9;
+  margin: 0;
+}
 }
