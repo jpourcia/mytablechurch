@@ -1,15 +1,11 @@
 :root {
   --bg: #f7f4ee;
   --surface: #ffffff;
-  --surface-alt: #f0ebe1;
   --text: #2b241d;
-  --muted: #6f6257;
   --accent: #8a5a2b;
   --accent-dark: #6d451f;
   --green: #344323;
-  --border: #dccfbe;
   --shadow: 0 12px 30px rgba(43, 36, 29, 0.10);
-  --radius: 18px;
   --max: 1120px;
 }
 
@@ -17,8 +13,8 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
+html,
+body {
   max-width: 100%;
   overflow-x: hidden;
 }
@@ -29,23 +25,12 @@ body {
   background: var(--bg);
   color: var(--text);
   line-height: 1.65;
-  max-width: 100%;
-  overflow-x: hidden;
 }
 
 img {
   max-width: 100%;
   height: auto;
   display: block;
-}
-
-a {
-  color: var(--accent-dark);
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
 }
 
 .container {
@@ -101,12 +86,42 @@ a:hover {
   font-size: 1.3rem;
 }
 
-/* WELCOME */
+/* WELCOME BOX */
 
-.welcome h2 {
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
+.welcome-section {
+  padding: 70px 20px;
+}
+
+.welcome-box {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: var(--surface);
+  padding: 48px;
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+  border-left: 8px solid var(--accent);
+  text-align: center;
+}
+
+.welcome-box h2 {
+  color: var(--green);
+  font-size: 2.3rem;
+  line-height: 1.3;
+  margin: 0 0 24px;
+}
+
+.welcome-text {
+  font-size: 1.15rem;
+  line-height: 1.9;
+  max-width: 850px;
+  margin: 0 auto 24px;
+}
+
+.welcome-box .highlight {
+  color: var(--green);
+  font-size: 1.45rem;
+  font-weight: bold;
+  margin: 0;
 }
 
 /* SERVICE IMAGE CARDS */
@@ -152,7 +167,6 @@ a:hover {
 /* ABOUT / WHO WE ARE */
 
 .about-church {
-  background: var(--bg);
   padding: 70px 20px;
 }
 
@@ -169,14 +183,12 @@ a:hover {
 .about-container h2 {
   color: var(--green);
   font-size: 2.4rem;
-  margin-top: 0;
-  margin-bottom: 28px;
+  margin: 0 0 28px;
   text-align: center;
 }
 
 .about-container p {
   font-size: 1.12rem;
-  color: var(--text);
   line-height: 1.9;
   margin: 0 0 22px;
 }
@@ -311,19 +323,26 @@ a:hover {
     padding: 3.5rem 0;
   }
 
+  .welcome-box,
   .about-container,
   .mission-box,
   .location-box {
     padding: 30px 24px;
   }
 
+  .welcome-box h2,
   .about-container h2 {
     font-size: 1.9rem;
   }
 
+  .welcome-text,
   .about-container p,
   .mission-box p {
     font-size: 1rem;
+  }
+
+  .welcome-box .highlight {
+    font-size: 1.2rem;
   }
 
   .mission-box .mission {
