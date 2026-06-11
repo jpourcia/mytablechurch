@@ -338,5 +338,47 @@ body {
     width: 100%;
     display: block;
 }
+  .about-church {
+  background: #f7f3eb;
+  padding: 60px 20px;
+}
+
+.about-container {
+  max-width: 950px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+  border-left: 8px solid #344323;
+}
+
+.about-container h2 {
+  color: #344323;
+  font-size: 2rem;
+  margin-top: 0;
+  text-align: center;
+}
+
+.about-container p {
+  font-size: 1.1rem;
+  color: #222;
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+
+@media (max-width: 600px) {
+  .about-container {
+    padding: 25px;
+  }
+
+  .about-container h2 {
+    font-size: 1.7rem;
+  }
+
+  .about-container p {
+    font-size: 1rem;
+  }
+}
   }
 }
