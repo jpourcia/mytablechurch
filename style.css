@@ -380,12 +380,10 @@ body {
     font-size: 1rem;
   }
 }
-  .service-image-wrap {
-    max-width: 1200px;
-    margin: 35px auto 0;
-    padding: 0 10px;
+ .service-image-wrap {
+    max-width: 1000px;
+    margin: 35px auto;
 }
-
 .service-image {
     width: 100%;
     height: auto;
