@@ -321,5 +321,21 @@ a:hover {
     width: 100%;
     text-align: center;  
 }
+  body {
+    margin: 0;
+    background: #f5f5f5;
+}
+
+.flyer-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.flyer-container img {
+    max-height: 95vh;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
   }
 }
