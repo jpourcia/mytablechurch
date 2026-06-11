@@ -6,8 +6,9 @@
   --muted: #6f6257;
   --accent: #8a5a2b;
   --accent-dark: #6d451f;
+  --green: #344323;
   --border: #dccfbe;
-  --shadow: 0 12px 30px rgba(43, 36, 29, 0.08);
+  --shadow: 0 12px 30px rgba(43, 36, 29, 0.10);
   --radius: 18px;
   --max: 1120px;
 }
@@ -18,6 +19,8 @@
 
 html {
   scroll-behavior: smooth;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -26,10 +29,13 @@ body {
   background: var(--bg);
   color: var(--text);
   line-height: 1.65;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 img {
   max-width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -56,11 +62,13 @@ a:hover {
   text-align: center;
 }
 
+/* HEADER */
+
 .site-header {
   position: sticky;
   top: 0;
   z-index: 20;
-  background: rgba(247, 244, 238, 0.94);
+  background: rgba(247, 244, 238, 0.96);
   border-bottom: 1px solid var(--border);
   backdrop-filter: blur(8px);
 }
@@ -82,11 +90,12 @@ a:hover {
 .brand h1 {
   font-size: 1.3rem;
   margin: 0;
+  color: var(--green);
 }
 
-  .brand-logo {
-    width: 150px;   /* Small logo */
-    height: auto;
+.brand-logo {
+  width: 150px;
+  height: auto;
 }
 
 .tagline {
@@ -118,6 +127,8 @@ a:hover {
   font-weight: 600;
 }
 
+/* HERO */
+
 .hero {
   padding: 5rem 0 4rem;
   background:
@@ -145,6 +156,7 @@ a:hover {
   font-size: clamp(2rem, 4vw, 3.7rem);
   line-height: 1.1;
   margin: 0.5rem 0 1rem;
+  color: var(--green);
 }
 
 .hero-text {
@@ -206,10 +218,7 @@ a:hover {
   margin-top: 0;
 }
 
-.hero-card ul {
-  margin: 0;
-  padding-left: 1.2rem;
-}
+/* GENERAL SECTIONS */
 
 .section {
   padding: 4.5rem 0;
@@ -223,41 +232,106 @@ a:hover {
 
 .section h2 {
   font-size: clamp(1.8rem, 3vw, 2.6rem);
-  margin-top: 0.3rem;
-  margin-bottom: 1rem;
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.2rem;
-  margin-top: 1.5rem;
-}
-
-.card {
-  padding: 1.4rem;
-}
-
-.card h3 {
   margin-top: 0;
-  margin-bottom: 0.6rem;
+  margin-bottom: 1rem;
+  color: var(--green);
 }
 
-.event-date {
-  display: inline-block;
-  margin-bottom: 0.8rem;
-  font-size: 0.84rem;
-  font-weight: 700;
-  color: var(--accent-dark);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+/* ABOUT / WHO WE ARE */
+
+.about-church {
+  background: var(--bg);
+  padding: 70px 20px;
 }
 
-.text-link {
-  display: inline-block;
-  margin-top: 0.8rem;
-  font-weight: 700;
+.about-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: var(--surface);
+  padding: 48px;
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+  border-left: 8px solid var(--green);
 }
+
+.about-container h2 {
+  color: var(--green);
+  font-size: 2.4rem;
+  margin-top: 0;
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.about-container p {
+  font-size: 1.12rem;
+  color: var(--text);
+  line-height: 1.9;
+  margin: 0 0 22px;
+}
+
+/* SERVICE IMAGE CARDS */
+
+.service {
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.service-cards {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 28px;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1350px;
+  margin: 40px auto 0;
+}
+
+.service-card {
+  flex: 1 1 300px;
+  max-width: 390px;
+  background: var(--surface);
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: var(--shadow);
+}
+
+.service-card-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+}
+
+.service-card-image:hover {
+  transform: translateY(-4px);
+  transition: transform 0.3s ease;
+}
+
+/* LUNCH SECTION */
+
+.lunch {
+  background: var(--green);
+  color: white;
+  text-align: center;
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 65px 30px;
+  border-radius: 0;
+}
+
+.lunch h2 {
+  color: white;
+  font-size: 2.2rem;
+}
+
+.lunch p {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+/* SCRIPTURE / MISSION */
 
 .scripture-band blockquote {
   margin: 0;
@@ -279,6 +353,8 @@ a:hover {
   margin-top: 1rem;
 }
 
+/* FOOTER */
+
 .site-footer {
   background: #201a15;
   color: #f4eee5;
@@ -296,15 +372,26 @@ a:hover {
   margin: 0;
 }
 
+/* RESPONSIVE */
+
 @media (max-width: 900px) {
-  .hero-grid,
-  .cards {
+  .hero-grid {
     grid-template-columns: 1fr;
   }
 
   .nav-wrap {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .service-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-card {
+    width: 100%;
+    max-width: 520px;
   }
 }
 
@@ -319,103 +406,22 @@ a:hover {
 
   .btn {
     width: 100%;
-    text-align: center;  
-}
-body {
-    background: #ddd;
-    margin: 0;
-    padding: 20px;
-}
+    text-align: center;
+  }
 
-.flyer-page {
-    max-width: 850px;
-    margin: auto;
-    background: white;
-    box-shadow: 0 0 15px rgba(0,0,0,.2);
-}
-
-.flyer-page img {
-    width: 100%;
-    display: block;
-}
-  .about-church {
-  background: #f7f3eb;
-  padding: 60px 20px;
-}
-
-.about-container {
-  max-width: 950px;
-  margin: 0 auto;
-  background: #ffffff;
-  padding: 40px;
-  border-radius: 14px;
-  box-shadow: 0 4px 18px rgba(0,0,0,0.12);
-  border-left: 8px solid #344323;
-}
-
-.about-container h2 {
-  color: #344323;
-  font-size: 2rem;
-  margin-top: 0;
-  text-align: center;
-}
-
-.about-container p {
-  font-size: 1.1rem;
-  color: #222;
-  line-height: 1.8;
-  margin-bottom: 18px;
-}
-
-@media (max-width: 600px) {
   .about-container {
-    padding: 25px;
+    padding: 30px 24px;
   }
 
   .about-container h2 {
-    font-size: 1.7rem;
+    font-size: 1.9rem;
   }
 
   .about-container p {
     font-size: 1rem;
   }
-}
-.service {
-    text-align: center;
-}
 
-.service-cards {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    flex-wrap: wrap;
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 0 20px;
-}
-
-    .service-card {
-        width: 100%;
-        max-width: 600px;
-    }
-}
-
-.service-card {
-    flex: 1 1 300px;
-    max-width: 420px;
-}
-
-.service-card-image {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 16px;
-    box-shadow: 0 10px 25px rgba(0,0,0,.15);
-    transition: transform 0.3s ease;
-}
-
-.service-card-image:hover {
-    transform: translateY(-5px);
-}
+  .lunch {
+    padding: 45px 20px;
   }
 }
